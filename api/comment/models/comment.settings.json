@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comment",
+  "info": {
+    "name": "comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "course": {
+      "via": "comments",
+      "model": "course",
+      "private": true
+    }
+  }
+}
